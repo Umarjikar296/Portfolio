@@ -1,4 +1,4 @@
-import Logo from '../assets/logo.png'
+import Logo from '../assets/Logo.png'
 import { useEffect, useRef, useState } from 'react';
 import OverlayMenu from './OverlayMenu';
 import { IoMdMenu } from "react-icons/io";
