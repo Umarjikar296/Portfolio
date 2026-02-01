@@ -4,8 +4,8 @@ import boy from "../assets/boy.jpg";
 export default function About() {
     const stats = [
         { label: "Experience", value: "2+ years" },
-        { label: "Speciality", value: "Web development" },
-        { label: "Focus", value: "Front-End" },
+        { label: "Speciality", value: "Front End" },
+        { label: "Focus", value: "React Js" },
     ]
 
     const glows = [
@@ -35,15 +35,19 @@ export default function About() {
                     transition={{ duration: 0.6 }}
                     viewport={{ once: true, amount: 0.4 }}
                 >
+
+                    
                     <motion.div className="relative w-[160px] h-[160px] md:w-[200px] md:h-[200px] rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-[#1cd8d2]/20 to-[#302b63]/20 border border-[#1cd8d2]/25"
                         whileHover={{ scale: 1.05 }}
                         transition={{ type: "spring", stiffness: 400, damping: 10 }}>
                         <img src={boy} alt="profile" className="absolute inset-0 object-cover" />
                     </motion.div>
+
+
                     <div className="flex-1 flex flex-col justify-center text-center md:text-left">
                         <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-[#1cd8d2] via-[#00bf8f] to-[#1cd8d2]">Ashwin Umarjikar</h2>
                         <p className="mt-2 text-lg sm:text-xl text-white/90 font-semibold">FontEnd Developer</p>
-                        <p className="mt-4 text-gray-300 leading-relaxed text-base sm:text-lg max-w-2xl md:max-w-3xl">I build scalable website, very nice Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem distinctio alias labore nobis atque, illum consectetur veritatis sint nihil, laboriosam blanditiis sapiente consequatur debitis ea explicabo optio placeat quibusdam quaerat.</p>
+                        <p className="mt-4 text-gray-300 leading-relaxed text-base sm:text-lg max-w-2xl md:max-w-3xl">I’m a front-end developer who builds responsive, pixel-perfect interfaces with smooth animations and great UX. I turn designs into fast, accessible React experiences using modern tools like Tailwind and Framer Motion.</p>
                         <div className="mt-6 grid grid-col-2 sm:grid-cols-3 gap-3 sm:gap-4 max-w-xl">
                             {stats.map((item, i) => (
                                 <motion.div key={i} className="rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-center"
@@ -74,8 +78,8 @@ export default function About() {
                     transition={{ duration: 0.6 }}
                     viewport={{ once: true, amount: 0.4 }}>
                     <h3 className="text-2xl sm:text-3xl font-bold text-white mb-3">About Me</h3>
-                    <p className="text-gray-300 leading-relaxed text-base sm:text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quos repellendus, nulla aut quia modi! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit eveniet eaque eius ipsa. Nemo, dolores veritatis deleniti soluta alias repellat! Esse perferendis fugiat, quisquam vitae ipsam dolorem obcaecati fuga ea.</p>
-                    <p className="mt-4 text-gray-400 text-base sm:text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quos repellendus, nulla aut quia modi!</p>
+                    <p className="text-gray-300 leading-relaxed text-base sm:text-lg">I specialize in turning designs into fast, scalable front-end experiences. My focus is on building reusable components, clean layouts, and intuitive user flows that feel great on every device. I enjoy collaborating with teams and iterating quickly to ship features that users actually love.</p>
+                    <p className="mt-4 text-gray-400 text-base sm:text-lg">I’m focused on writing clean, scalable front-end code and delivering smooth, modern experiences.</p>
                 </motion.div>
             </div>
         </section>

@@ -1,14 +1,24 @@
 import { FaReact } from "react-icons/fa";
 import { SiTailwindcss } from "react-icons/si";
 import { FaDocker } from "react-icons/fa";
+import { TbBrandFramerMotion } from "react-icons/tb";
+import { IoLogoJavascript } from "react-icons/io";
+import { SiMongodb } from "react-icons/si";
+import { FaFigma } from "react-icons/fa";
+import { RiNextjsLine } from "react-icons/ri";
 import { motion, useMotionValue } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
 export default function Skills() {
     const skills = [
         { icon: <FaReact />, name: 'React' },
+        { icon: <RiNextjsLine />, name: 'React' },
         { icon: <SiTailwindcss />, name: 'TailwindCss' },
         { icon: <FaDocker />, name: 'Docker' },
+        { icon: <IoLogoJavascript />, name: 'JavaScript' },
+        { icon: <FaFigma />, name: 'Figma' },
+        { icon: <TbBrandFramerMotion />, name: 'Framer Motion' },
+        { icon: <SiMongodb />, name: 'MongoDB' },
     ]
 
     const repeated = [...skills, ...skills, ...skills, ...skills, ...skills]

@@ -3,12 +3,12 @@ import ParticlesBackground from "../components/ParticlesBackground";
 import { useEffect, useMemo, useState } from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import avator from '../assets/avator.png'
-
+import { FaInstagram } from "react-icons/fa";
 
 const socials = [
-    // { Icon: FaxTwitter, label: "X", href: 'https://google.com' },
-    { Icon: FaLinkedin, label: "Linkedin", href: 'https://google.com' },
-    { Icon: FaGithub, label: "Github", href: 'https://google.com' },
+    { Icon: FaInstagram, label: "Instagram", href: 'https://www.instagram.com/antidevil__/' },
+    { Icon: FaLinkedin, label: "Linkedin", href: 'https://www.linkedin.com/feed/' },
+    { Icon: FaGithub, label: "Github", href: 'https://github.com/dashboard' },
 ]
 
 const glowVariants = {
@@ -104,7 +104,7 @@ export default function Home() {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.5, duration: 1 }}
                         >
-                            I turn complex design ideas into reality
+                            I build fast, modern websites and web apps that look great and convert visitors into customers. From clean UI to solid performance, I turn ideas into polished digital experiences.
                         </motion.p>
 
                         <motion.div className="mt-10 flex flex-wrap items-center justify-center lg:justify-start gap-6"

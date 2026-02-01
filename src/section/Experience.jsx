@@ -4,28 +4,22 @@ import { useEffect, useMemo, useRef, useState } from "react";
 
 const experiences = [
     {
-        role: "Web Developer",
+        role: "Frontend Developer Intern",
         company: "Pentableu",
-        duration: "2020",
-        description: "Built high-permormance web apps."
+        duration: "4 Months",
+        description: "HTML, CSS, and JavaScript library React Js. Responsive and interactive user interfaces."
     },
     {
-        role: "Web Developer",
+        role: "Frontend Developer ",
         company: "Pentableu",
-        duration: "2020",
-        description: "Built high-permormance web apps."
+        duration: "1.2 Year",
+        description: "Portfolio web apps, Web mailers, built reusable components "
     },
     {
-        role: "Web Developer",
-        company: "Pentableu",
-        duration: "2020",
-        description: "Built high-permormance web apps."
-    },
-    {
-        role: "Web Developer",
-        company: "Pentableu",
-        duration: "2020",
-        description: "Built high-permormance web apps."
+        role: "Junior Associate - Web Developer",
+        company: "AffinityX",
+        duration: "1 Year",
+        description: "Techs: WordPress, Elementor, Beaver Builder, Responsive Design."
     },
 ];
 
@@ -57,7 +51,7 @@ function ExperienceItem({ exp, idx, start, end, scrollYProgress, layout }) {
                         {exp.role}
                     </h3>
                     <p className="text-md text-gray-400 mb-3">
-                        {exp.company}| {exp.duration}
+                        {exp.company} | {exp.duration}
                     </p>
                     <p className="text-md text-gray-300 break-words">
                         {exp.description}

@@ -2,7 +2,7 @@ import Navbar from './components/Navbar'
 import Home from './section/Home'
 import About from './section/About'
 import Skills from './section/Skills'
-// import Projects from './section/Projects'
+import Projects from './section/Projects'
 import Experience from './section/Experience'
 // import Testimonials from './section/Testimonials'
 import Contact from './section/Contact'
@@ -28,7 +28,7 @@ export default function App() {
           <Home />
           <About />
           <Skills />
-          {/* <Projects /> */}
+          <Projects />
           <Experience />
           {/* <Testimonials /> */}
           <Contact />
