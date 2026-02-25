@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 
 export default function Projects() {
     const stats = [
-        { label: "Next.js Food Delivery App", value: "Built to understand the complete full-stack workflow using Next.js (App Router). Focused mainly on backend logic, API routes, and data flow rather than UI polish.", value2: "Practiced full-stack integration: sending requests from pages, handling responses, and displaying results.", value3: "next-js-food-delivery-kcbe-git-main-ashwin-umarjikars-projects.vercel.app" },
+        { label: "Next.js Food Delivery App", value: "Built to understand the complete full-stack workflow using Next.js (App Router). Focused mainly on backend logic, API routes, and data flow rather than UI polish.", value2: "Practiced full-stack integration: sending requests from pages, handling responses, and displaying results.", value3: "https://next-js-food-delivery-kcbe-git-main-ashwin-umarjikars-projects.vercel.app" },
 
 
         { label: "Portfolio", value: "Built a responsive personal portfolio using React and Vite, enhanced with Framer Motion animations for smooth transitions and a modern user experience.", value2: 'Added smooth micro-interactions and page/section transitions using Framer Motion to improve the overall UX', value3: "https://portfolio-pi-one-0usjbay29r.vercel.app/" },
@@ -12,6 +12,8 @@ export default function Projects() {
         { label: "Restaurant App", value: "Built a food app prototype using React + Vite, focused on understanding real project structure and end-to-end app flow.", value2: 'A learning-focused project to gain hands-on experience with a full app workflow. Implemented Redux Toolkit patterns (store/slices) and worked on connecting UI pages with state (categories/cart)', value3: 'https://food-app-mocha-omega.vercel.app/' },
 
         { label: "Tic Tac Toe", value: "Built a classic two-player Tic Tac Toe game to practice React state handling and component structure; deployed with Vercel (live demo link included in the repo).", value2: 'Simple game project built with Vite to practice UI logic, state management, and deployment workflow', value3: 'https://tic-tac-toe-red-psi-70.vercel.app/' },
+        { label: "Task Master", value: "Task management dashboard: Create, view, update, and delete tasks with a clean, responsive interface for daily tracking.", value2: 'Productivity features: Organize tasks by key details (like status/priority/due dates) to stay on top of work and deadlines.', value3: 'https://task-masater-git-main-ashwin-umarjikars-projects.vercel.app/' },
+
     ]
 
     const glows = [
