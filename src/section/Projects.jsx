@@ -63,9 +63,16 @@ export default function Projects() {
                                         </li>
                                     </div>
 
-                                    <div className="pt-2 text-justify px-5 underline text-md text-gray-400">
+                                    <div className="pt-2 text-justify px-5 text-md text-gray-400">
                                         <li>
-                                            {item.value3}
+                                            <a
+                                                href={item.value3}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="text-[#1cd8d2] hover:underline break-all"
+                                            >
+                                                🔗 Live Demo
+                                            </a>
                                         </li>
                                     </div>
                                 </motion.div>
