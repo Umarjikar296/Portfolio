@@ -11,6 +11,7 @@ import Footer from './section/Footer'
 import CustomCursor from './components/CustomCursor'
 import { useState } from 'react'
 import IntroAnimation from './components/IntroAnimation'
+import { LanguageProvider } from './context/LanguageContext'
 
 export default function App() {
 
@@ -18,7 +19,7 @@ export default function App() {
 
   return (
 
-    <>
+    <LanguageProvider>
       {!introDone && <IntroAnimation onFinish={() => setIntroDone(true)} />}
       {introDone && (
         <div className='relative, gradient text-white'>
@@ -35,7 +36,7 @@ export default function App() {
           <Footer />
         </div>
       )}
-    </>
+    </LanguageProvider>
   )
 }
 

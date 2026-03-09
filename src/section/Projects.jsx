@@ -1,28 +1,16 @@
 import React from 'react'
 import { motion } from "framer-motion"
+import { useLanguage } from "../context/LanguageContext";
 
 
 export default function Projects() {
-    const stats = [
-        { label: "Next.js Food Delivery App", value: "Built to understand the complete full-stack workflow using Next.js (App Router). Focused mainly on backend logic, API routes, and data flow rather than UI polish.", value2: "Practiced full-stack integration: sending requests from pages, handling responses, and displaying results.", value3: "https://next-js-food-delivery-kcbe-git-main-ashwin-umarjikars-projects.vercel.app" },
-
-
-        { label: "Portfolio", value: "Built a responsive personal portfolio using React and Vite, enhanced with Framer Motion animations for smooth transitions and a modern user experience.", value2: 'Added smooth micro-interactions and page/section transitions using Framer Motion to improve the overall UX', value3: "https://portfolio-pi-one-0usjbay29r.vercel.app/" },
-
-        { label: "Restaurant App", value: "Built a food app prototype using React + Vite, focused on understanding real project structure and end-to-end app flow.", value2: 'A learning-focused project to gain hands-on experience with a full app workflow. Implemented Redux Toolkit patterns (store/slices) and worked on connecting UI pages with state (categories/cart)', value3: 'https://food-app-mocha-omega.vercel.app/' },
-
-        { label: "Tic Tac Toe", value: "Built a classic two-player Tic Tac Toe game to practice React state handling and component structure; deployed with Vercel (live demo link included in the repo).", value2: 'Simple game project built with Vite to practice UI logic, state management, and deployment workflow', value3: 'https://tic-tac-toe-red-psi-70.vercel.app/' },
-        { label: "Task Master", value: "Task management dashboard: Create, view, update, and delete tasks with a clean, responsive interface for daily tracking.", value2: 'Productivity features: Organize tasks by key details (like status/priority/due dates) to stay on top of work and deadlines.', value3: 'https://task-masater-git-main-ashwin-umarjikars-projects.vercel.app/' },
-
-    ]
+    const { t } = useLanguage();
+    const { heading, items } = t.projects;
 
     const glows = [
         "-top-10 -left-10 w-[360px] h-[360px] opacity-20 blur-[120px]",
         "bottom-0 right-10 w-[420px] h-[420px] opacity-15 blur-[140px] delay-300",
-        // "top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[220px] h-[220px] opacity-10 blur-[100px]"
     ]
-
-
 
     return (
         <section id='projects' className="min-h-fit w-full flex relative bg-black text-white overflow-hidden ">
@@ -49,22 +37,19 @@ export default function Projects() {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: 0.1 }}
                         >
-                            Projects
+                            {heading}
                         </motion.h2>
 
                         <div className="mt-6 grid grid-col-1 lg:grid-cols-3 sm:grid-cols-1 gap-3 lg:gap-20  max-w-auto mx-[2vw] ">
 
-
-
-                            {stats.map((item, i) => (
+                            {items.map((item, i) => (
                                 <motion.div key={i} className="rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-center min-w-[350px]"
                                     initial={{ opacity: 0, y: 10 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ delay: 0.05 * i, duration: 0.4 }}
                                     viewport={{ once: true, amount: 0.3 }}
                                 >
-                                    <div className="py-2
-                                    text-2xl font-medium mb-2 ">
+                                    <div className="py-2 text-2xl font-medium mb-2 ">
                                         {item.label}
                                     </div>
                                     <div className="text-md px-5 text-justify text-gray-400">
@@ -73,17 +58,14 @@ export default function Projects() {
                                         </li>
                                     </div>
                                     <div className="pt-2 text-justify px-5 text-md text-gray-400">
-
                                         <li>
                                             {item.value2}
                                         </li>
                                     </div>
 
                                     <div className="pt-2 text-justify px-5 underline text-md text-gray-400">
-
                                         <li>
                                             {item.value3}
-
                                         </li>
                                     </div>
                                 </motion.div>

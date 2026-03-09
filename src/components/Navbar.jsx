@@ -2,8 +2,10 @@ import Logo from '../assets/Logo.png'
 import { useEffect, useRef, useState } from 'react';
 import OverlayMenu from './OverlayMenu';
 import { IoMdMenu } from "react-icons/io";
+import { useLanguage } from '../context/LanguageContext';
 
 export default function Navbar() {
+    const { t, toggleLang, lang } = useLanguage();
 
     const [menuOpen, setMenuOpen] = useState(false);
     const [visible, setVisible] = useState(true);
@@ -71,15 +73,31 @@ export default function Navbar() {
 
                 <div className='block lg:absolute lg:left-1/2 lg:transform lg:translate-x-1/2'>
                     <button onClick={() => setMenuOpen(true)}
-
                         className='text-white text-3xl focus:outline-none'>
                         <IoMdMenu />
-
                     </button>
                 </div>
 
-                <div className='hidden lg:block'>
-                    <a href="#contact" className='bg-gradient-to-r from-pink-500 to-blue-500 text-white px-5 py-2 rounded-full font-medium shadow-lg hover:opacity-90 transition-opacity duration-300'> Reach Out</a>
+                {/* Right side: language toggle + reach out */}
+                <div className='flex items-center gap-3'>
+                    {/* Language Toggle */}
+                    <button
+                        onClick={toggleLang}
+                        title={lang === 'en' ? 'Switch to German' : 'Auf Englisch wechseln'}
+                        className='cursor-pointer flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-white/30 text-white text-sm font-semibold hover:bg-white/10 transition-colors duration-300'
+                    >
+                        <span className='text-base leading-none'>
+                            {lang === 'en' ? '🇩🇪' : '🇬🇧'}
+                        </span>
+                        <span>{t.nav.langToggle}</span>
+                    </button>
+
+                    {/* Reach Out – hidden on small screens */}
+                    <div className='hidden lg:block'>
+                        <a href="#contact" className='bg-gradient-to-r from-pink-500 to-blue-500 text-white px-5 py-2 rounded-full font-medium shadow-lg hover:opacity-90 transition-opacity duration-300'>
+                            {t.nav.reachOut}
+                        </a>
+                    </div>
                 </div>
 
             </nav>

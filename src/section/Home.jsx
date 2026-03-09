@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import avator from '../assets/avator.png'
 import { FaInstagram } from "react-icons/fa";
+import { useLanguage } from "../context/LanguageContext";
 
 const socials = [
     { Icon: FaInstagram, label: "Instagram", href: 'https://www.instagram.com/antidevil__/' },
@@ -22,12 +23,19 @@ const glowVariants = {
 }
 
 export default function Home() {
-
-    const roles = useMemo(() => ["Web Developer", "Frontend Developer", "React Developer"], [])
+    const { t } = useLanguage();
+    const roles = t.home.roles;
 
     const [index, setIndex] = useState(0)
     const [subIndex, setSubIndex] = useState(0)
     const [deleting, setDeleting] = useState(false)
+
+    // Reset typewriter when language changes
+    useEffect(() => {
+        setIndex(0);
+        setSubIndex(0);
+        setDeleting(false);
+    }, [roles])
 
     useEffect(() => {
         const current = roles[index];
@@ -44,7 +52,7 @@ export default function Home() {
                 setSubIndex(v => v - 1);
 
             else if (deleting && subIndex === 0) { setDeleting(false); setIndex(p => (p + 1) % roles.length) }
-        }, deleting ? 40 : 60)  //here we tell if deleting the speed and if writing the speed.
+        }, deleting ? 40 : 60)
 
         return () => clearTimeout(timeout);
 
@@ -92,10 +100,10 @@ export default function Home() {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 1.3 }}
                         >
-                            Hello i'm
+                            {t.home.greeting}
                             <br />
                             <span className="text-white font-bold text-5xl sm:text-6xl md:text-7xl lg:text-8xl lg:whitespace-nowrap">
-                                Ashwin Umarjikar
+                                {t.home.name}
                             </span>
                         </motion.h1>
 
@@ -104,17 +112,17 @@ export default function Home() {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.5, duration: 1 }}
                         >
-                            I build fast, modern websites and web apps that look great and convert visitors into customers. From clean UI to solid performance, I turn ideas into polished digital experiences.
+                            {t.home.description}
                         </motion.p>
 
                         <motion.div className="mt-10 flex flex-wrap items-center justify-center lg:justify-start gap-6"
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ delay: 0.8, duration: 1 }}>
-                            <a href="#project" className="px-6 py-3 rounded-full font-medium text-lg text-white bg-gradient-to-r from-[#1cd8d2] via-[#00bf8f] to-[#302b63] shadow-lg hover:scale-110 transition-all">View My word</a>
+                            <a href="#projects" className="px-6 py-3 rounded-full font-medium text-lg text-white bg-gradient-to-r from-[#1cd8d2] via-[#00bf8f] to-[#302b63] shadow-lg hover:scale-110 transition-all">{t.home.viewWork}</a>
 
 
-                            <a target="_blank" href="/CV.pdf" className="px-6 py-3 rounded-full font-medium text-black bg-white hover:bg-gray-200 shadow-lg hover:scale-110 transition-all">Resume</a>
+                            <a target="_blank" href="/CV.pdf" className="px-6 py-3 rounded-full font-medium text-black bg-white hover:bg-gray-200 shadow-lg hover:scale-110 transition-all">{t.home.resume}</a>
                         </motion.div>
 
                         <div className="mt-10 flex gap-5 text-2xl md:text-3xl justify-center lg:justify-start ">

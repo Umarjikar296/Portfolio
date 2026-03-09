@@ -8,8 +8,10 @@ import { FaFigma } from "react-icons/fa";
 import { RiNextjsLine } from "react-icons/ri";
 import { motion, useMotionValue } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import { useLanguage } from "../context/LanguageContext";
 
 export default function Skills() {
+    const { t } = useLanguage();
     const skills = [
         { icon: <FaReact />, name: 'React' },
         { icon: <RiNextjsLine />, name: 'React' },
@@ -101,14 +103,14 @@ export default function Skills() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
             >
-                My Skills
+                {t.skills.heading}
             </motion.h2>
             <motion.p className="mt-2 mb-8 text-white/90 text-base sm:text-lg z-10"
                 initial={{ opacity: 0, y: -10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
             >
-                Modern Application | Modern Technologies.
+                {t.skills.subtitle}
             </motion.p>
             <div className="relative w-full overflow-hidden">
 

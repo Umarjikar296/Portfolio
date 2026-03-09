@@ -1,8 +1,9 @@
 import { useState } from "react";
 import ParticlesBackground from "../components/ParticlesBackground";
 import emailjs from "@emailjs/browser";
-import { easeIn, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import Astra from '../assets/Astra.png'
+import { useLanguage } from "../context/LanguageContext";
 
 
 const SERVICE_ID = import.meta.env.VITE_SERVICE_ID;
@@ -10,6 +11,8 @@ const TEMPLATE_ID = import.meta.env.VITE_TEMPLATE_ID;
 const PUBLIC_KEY = import.meta.env.VITE_PUBLIC_KEY;
 
 export default function Contact() {
+    const { t } = useLanguage();
+    const c = t.contact;
 
     const [formData, setFormData] = useState({
         name: "",
@@ -91,18 +94,18 @@ export default function Contact() {
                     transition={{ duration: 0.6 }}
                 >
                     <h2 className="text-3xl font-bold mb-6">
-                        Lets Work Together
+                        {c.heading}
                     </h2>
 
                     <form className="flex flex-col gap-5" onSubmit={handleSubmit}>
 
                         <div className="flex flex-col">
                             <label className="mb-1">
-                                Your Name <span className="text-red-500">*</span>
+                                {c.name} <span className="text-red-500">*</span>
                             </label>
                             <input type="text"
                                 name="name"
-                                placeholder="Your Name"
+                                placeholder={c.namePlaceholder}
                                 value={formData.name}
                                 onChange={handleChange}
                                 className={`p-3 rounded-md bg-white/10 border ${errors.name ? "border-red-500" : "border-gray-500"} text-white focus:outline-none focus:border-blue-500`}
@@ -112,11 +115,11 @@ export default function Contact() {
 
                         <div className="flex flex-col">
                             <label className="mb-1">
-                                Your Email <span className="text-red-500">*</span>
+                                {c.email} <span className="text-red-500">*</span>
                             </label>
                             <input type="text"
                                 name="email"
-                                placeholder="Your Email"
+                                placeholder={c.emailPlaceholder}
                                 value={formData.email}
                                 onChange={handleChange}
                                 className={`p-3 rounded-md bg-white/10 border ${errors.email ? "border-red-500" : "border-gray-500"} text-white focus:outline-none focus:border-blue-500`}
@@ -126,7 +129,7 @@ export default function Contact() {
 
                         <div className="flex flex-col">
                             <label className="mb-1">
-                                Service Needed <span className="text-red-500">*</span>
+                                {c.service} <span className="text-red-500">*</span>
                             </label>
                             <select name="service"
                                 value={formData.service}
@@ -134,11 +137,11 @@ export default function Contact() {
                                 className={`p-3 rounded-md bg-white/10 border ${errors.service ? "border-red-500" : "border-gray-500"} text-white focus:outline-none focus:border-blue-500`}
                             >
                                 <option value="" disabled>
-                                    Something in Mind?
+                                    {c.servicePlaceholder}
                                 </option>
-                                <option value="Web Developement">Web Developement</option>
-                                <option value="Mobile Developement">Mobile Developement</option>
-                                <option value="others">Others</option>
+                                <option value="Web Developement">{c.serviceWeb}</option>
+                                <option value="Mobile Developement">{c.serviceMobile}</option>
+                                <option value="others">{c.serviceOthers}</option>
                             </select>
                             {errors.service && <p className="text-red-500 text-xs">{errors.service}</p>}
                         </div>
@@ -146,11 +149,11 @@ export default function Contact() {
                         {formData.service && formData.service !== "others" && (
                             <div className="flex flex-col">
                                 <label className="mb-1">
-                                    Your Budget <span className="text-red-500">*</span>
+                                    {c.budget} <span className="text-red-500">*</span>
                                 </label>
                                 <input type="text"
                                     name="budget"
-                                    placeholder="Your Budget"
+                                    placeholder={c.budgetPlaceholder}
                                     value={formData.budget}
                                     onChange={handleChange}
                                     className={`p-3 rounded-md bg-white/10 border ${errors.budget ? "border-red-500" : "border-gray-500"} text-white focus:outline-none focus:border-blue-500`}
@@ -161,11 +164,11 @@ export default function Contact() {
 
                         <div className="flex flex-col">
                             <label className="mb-1">
-                                Explain Your Idea! <span className="text-red-500">*</span>
+                                {c.idea} <span className="text-red-500">*</span>
                             </label>
                             <textarea name="idea"
                                 rows={5}
-                                placeholder="Enter Your Idea"
+                                placeholder={c.ideaPlaceholder}
                                 value={formData.idea}
                                 onChange={handleChange}
                                 className={`p-3 rounded-md bg-white/10 border ${errors.idea ? "border-red-500" : "border-gray-500"} text-white focus:outline-none focus:border-blue-500`}
@@ -177,7 +180,7 @@ export default function Contact() {
                         {
                             status && (
                                 <p className={`text-sm ${status === 'success' ? "text-green-400" : status === 'error' ? 'text-red-400' : "text-yellow-400"}`}>
-                                    {status === 'sending' ? "sending..." : status === 'success' ? "Message sent successfully ✅" : "Something went wrong ❌"}
+                                    {status === 'sending' ? c.sending : status === 'success' ? c.success : c.error}
                                 </p>
                             )}
                         <motion.button className="bg-blue-600 hover:bg-blue-700 disabled:opacity-60 text-white py-3 rounded-md font-semibold transition"
@@ -186,7 +189,7 @@ export default function Contact() {
                             disabled={status === 'sending'}
                             type="submit"
                         >
-                            {status === 'sending' ? 'Sending...' : 'Send Message'}
+                            {status === 'sending' ? c.sending : c.send}
                         </motion.button>
 
 

@@ -1,27 +1,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useEffect, useMemo, useRef, useState } from "react";
+import { useLanguage } from "../context/LanguageContext";
 
-
-const experiences = [
-    {
-        role: "Frontend Developer Intern",
-        company: "Pentableu",
-        duration: "4 Months",
-        description: "HTML, CSS, and JavaScript library React Js. Responsive and interactive user interfaces."
-    },
-    {
-        role: "Frontend Developer ",
-        company: "Pentableu",
-        duration: "1.2 Year",
-        description: "Portfolio web apps, Web mailers, built reusable components "
-    },
-    {
-        role: "Junior Associate - Web Developer",
-        company: "AffinityX",
-        duration: "1 Year",
-        description: "Techs: WordPress, Elementor, Beaver Builder, Responsive Design."
-    },
-];
 
 function ExperienceItem({ exp, idx, start, end, scrollYProgress, layout }) {
 
@@ -90,6 +70,8 @@ function ExperienceItem({ exp, idx, start, end, scrollYProgress, layout }) {
 }
 
 export default function Experience() {
+    const { t } = useLanguage();
+    const experiences = t.experience.items;
 
     const sceneRef = useRef(null);
     const [isMobile, setIsMobile] = useState(false);
@@ -108,7 +90,7 @@ export default function Experience() {
         offset: ["start start", "end end"]
     })
 
-    const threshold = useMemo(() => experiences.map((_, i) => (i + 1) / experiences.length), []);
+    const threshold = useMemo(() => experiences.map((_, i) => (i + 1) / experiences.length), [experiences]);
 
     const lineSize = useTransform(scrollYProgress, (v) => `${v * 100}%`)
 
@@ -120,7 +102,7 @@ export default function Experience() {
                 className="relative">
                 <div className="sticky top-0 h-screen flex flex-col">
                     <h2 className="text-4xl sm:text-5xl font-semibold mt-5 text-center">
-                        Experience
+                        {t.experience.heading}
                     </h2>
                     <div className="flex flex-1 items-center justify-center py-6 pb-10">
                         {!isMobile && (
