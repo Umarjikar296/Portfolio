@@ -1,11 +1,4 @@
-import { FaReact } from "react-icons/fa";
-import { SiTailwindcss } from "react-icons/si";
-import { FaDocker } from "react-icons/fa";
-import { TbBrandFramerMotion } from "react-icons/tb";
-import { IoLogoJavascript } from "react-icons/io";
-import { SiMongodb } from "react-icons/si";
-import { FaFigma } from "react-icons/fa";
-import { RiNextjsLine } from "react-icons/ri";
+import { FaLightbulb, FaUsers, FaRoute, FaTasks, FaChartLine, FaFigma, FaDatabase, FaCode } from "react-icons/fa";
 import { motion, useMotionValue } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { useLanguage } from "../context/LanguageContext";
@@ -13,14 +6,14 @@ import { useLanguage } from "../context/LanguageContext";
 export default function Skills() {
     const { t } = useLanguage();
     const skills = [
-        { icon: <FaReact />, name: 'React' },
-        { icon: <RiNextjsLine />, name: 'React' },
-        { icon: <SiTailwindcss />, name: 'TailwindCss' },
-        { icon: <FaDocker />, name: 'Docker' },
-        { icon: <IoLogoJavascript />, name: 'JavaScript' },
-        { icon: <FaFigma />, name: 'Figma' },
-        { icon: <TbBrandFramerMotion />, name: 'Framer Motion' },
-        { icon: <SiMongodb />, name: 'MongoDB' },
+        { icon: <FaLightbulb />, name: t.skills.items.strategy },
+        { icon: <FaUsers />, name: t.skills.items.research },
+        { icon: <FaRoute />, name: t.skills.items.roadmapping },
+        { icon: <FaTasks />, name: t.skills.items.agile },
+        { icon: <FaChartLine />, name: t.skills.items.analytics },
+        { icon: <FaFigma />, name: t.skills.items.figma },
+        { icon: <FaDatabase />, name: t.skills.items.sql },
+        { icon: <FaCode />, name: t.skills.items.techBackground },
     ]
 
     const repeated = [...skills, ...skills, ...skills, ...skills, ...skills]
@@ -67,9 +60,9 @@ export default function Skills() {
         window.addEventListener('touchmove', onTouchMove, { passive: true });
 
         return () => {
-            window.addEventListener('wheel', onWheel, { passive: true });
-            window.addEventListener('touchstart', onTouchStart, { passive: true });
-            window.addEventListener('touchmove', onTouchMove, { passive: true });
+            window.removeEventListener('wheel', onWheel);
+            window.removeEventListener('touchstart', onTouchStart);
+            window.removeEventListener('touchmove', onTouchMove);
         }
     }, [active]);
 
@@ -114,13 +107,13 @@ export default function Skills() {
             </motion.p>
             <div className="relative w-full overflow-hidden">
 
-                <motion.div ref={tractRef} style={{ x, whiteSpace: "nowrap", willChange: "transform" }} className="flex gap-10 text-6xl text-[#1cd8d2]">
+                <motion.div ref={tractRef} style={{ x, whiteSpace: "nowrap", willChange: "transform" }} className="flex gap-16 text-6xl text-[#1cd8d2]">
                     {repeated.map((s, i) => (
-                        <div key={i} aria-label={s.name} title={s.name} className="flex flex-col items-center gap-2 min-w-[120px]" >
+                        <div key={i} aria-label={s.name} title={s.name} className="flex flex-col items-center gap-3 shrink-0 min-w-[180px]" >
                             <span className="hover:scale-125 transition-transform duration-300">
                                 {s.icon}
                             </span>
-                            <p className="text-lg">{s.name}</p>
+                            <p className="text-lg font-medium whitespace-nowrap">{s.name}</p>
                         </div>
                     ))}
                 </motion.div>

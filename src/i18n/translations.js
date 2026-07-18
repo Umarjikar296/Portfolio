@@ -8,90 +8,83 @@ const translations = {
 
         // Overlay Menu
         menu: {
-            items: ["Home", "About", "Skills", "Projects", "Experience", "Contact"],
+            items: ["Home", "About", "Skills", "Case Studies", "Experience", "Contact"],
         },
 
         // Home
         home: {
-            roles: ["Web Developer", "Frontend Developer", "React Developer"],
+            roles: ["Aspiring Product Manager", "Product Management Enthusiast", "Product Strategy & Analytics"],
             greeting: "Hello I'm",
             name: "Ashwin Umarjikar",
             description:
-                "I build fast, modern websites and web apps that look great and convert visitors into customers. From clean UI to solid performance, I turn ideas into polished digital experiences.",
-            viewWork: "View My Work",
+                "Product Manager with a passion for understanding users, defining product strategy, and leading cross-functional teams to build intuitive, data-driven digital experiences.",
+            viewWork: "See My Case Studies",
             resume: "Resume",
         },
 
         // About
         about: {
             title: "Ashwin Umarjikar",
-            subtitle: "FrontEnd Developer",
-            bio: "I'm a front-end developer who builds responsive, pixel-perfect interfaces with smooth animations and great UX. I turn designs into fast, accessible React experiences using modern tools like Tailwind and Framer Motion.",
+            subtitle: "Aspiring Product Manager",
+            bio: "I'm a Product Manager with a solid technical background, leveraging my experience in frontend development to bridge the gap between engineering, design, and business. I focus on understanding user pain points, defining clear product requirements, and delivering high-impact solutions.",
             stats: [
                 { label: "Experience", value: "2+ years" },
-                { label: "Speciality", value: "Front End" },
-                { label: "Focus", value: "React Js" },
+                { label: "Speciality", value: "Product Management" },
+                { label: "Focus", value: "Strategy & Analytics" },
             ],
-            viewProjects: "View Projects",
+            viewProjects: "See My Case Studies",
             getInTouch: "Get in Touch",
             aboutMeHeading: "About Me",
-            aboutMe1:
-                "I specialize in turning designs into fast, scalable front-end experiences. My focus is on building reusable components, clean layouts, and intuitive user flows that feel great on every device. I enjoy collaborating with teams and iterating quickly to ship features that users actually love.",
             aboutMe2:
-                "I'm focused on writing clean, scalable front-end code and delivering smooth, modern experiences.",
+                "My career began as a software developer, where I focused on building features and solving technical challenges. Working in a startup environment, however, meant wearing multiple hats. Beyond writing code, I found myself collaborating directly with clients, gathering requirements, discussing business goals, and coordinating with designers and developers to bring ideas to life.",
         },
 
         // Skills
         skills: {
             heading: "My Skills",
-            subtitle: "Modern Application | Modern Technologies.",
+            subtitle: "Bridging business, design, and technology to build great products.",
+            items: {
+                strategy: "Product Strategy",
+                research: "User Research",
+                roadmapping: "Roadmapping",
+                agile: "Agile / Scrum",
+                analytics: "Product Analytics",
+                figma: "Wireframing & UX",
+                sql: "SQL & Analytics",
+                techBackground: "Technical Depth",
+            }
         },
 
-        // Projects
-        projects: {
-            heading: "Projects",
+        // Case Studies
+        caseStudies: {
+            heading: "Case Studies",
             items: [
                 {
-                    label: "Next.js Food Delivery App",
+                    label: "Thelootera E-commerce Platform",
                     value:
-                        "Built to understand the complete full-stack workflow using Next.js (App Router). Focused mainly on backend logic, API routes, and data flow rather than UI polish.",
+                        "Took a founder's idea for a personalized accessories brand from concept to a live product in 16 weeks, owning discovery, cross-functional delivery, and launch.",
                     value2:
-                        "Practiced full-stack integration: sending requests from pages, handling responses, and displaying results.",
+                        "Built lean on purpose — fewer products, done right, out the door on time.",
                     value3:
-                        "https://next-js-food-delivery-kcbe-git-main-ashwin-umarjikars-projects.vercel.app",
+                        "/case-study/thelootera",
                 },
                 {
-                    label: "Portfolio",
+                    label: "Rossari Biotech Ltd",
                     value:
-                        "Built a responsive personal portfolio using React and Vite, enhanced with Framer Motion animations for smooth transitions and a modern user experience.",
+                        "Built a SEBI-compliant financial reporting section for a listed company, structuring years of earnings and announcements into a clear, self-serve year-by-quarter archive.",
                     value2:
-                        "Added smooth micro-interactions and page/section transitions using Framer Motion to improve the overall UX",
-                    value3: "https://portfolio-pi-one-0usjbay29r.vercel.app/",
-                },
-                {
-                    label: "Restaurant App",
-                    value:
-                        "Built a food app prototype using React + Vite, focused on understanding real project structure and end-to-end app flow.",
-                    value2:
-                        "A learning-focused project to gain hands-on experience with a full app workflow. Implemented Redux Toolkit patterns (store/slices) and worked on connecting UI pages with state (categories/cart)",
-                    value3: "https://food-app-mocha-omega.vercel.app/",
-                },
-                {
-                    label: "Tic Tac Toe",
-                    value:
-                        "Built a classic two-player Tic Tac Toe game to practice React state handling and component structure; deployed with Vercel (live demo link included in the repo).",
-                    value2:
-                        "Simple game project built with Vite to practice UI logic, state management, and deployment workflow",
-                    value3: "https://tic-tac-toe-red-psi-70.vercel.app/",
-                },
-                {
-                    label: "Task Master",
-                    value:
-                        "Task management dashboard: Create, view, update, and delete tasks with a clean, responsive interface for daily tracking.",
-                    value2:
-                        "Productivity features: Organize tasks by key details (like status/priority/due dates) to stay on top of work and deadlines.",
+                        "Compliance requirement in, genuinely useful feature out.",
                     value3:
-                        "https://task-masater-git-main-ashwin-umarjikars-projects.vercel.app/",
+                        "/case-study/rossari",
+                },
+                {
+                    label: "PhysioCraft",
+                    value:
+                        "Redesigned a clinic's booking flow around two visit types with different durations, cutting scheduling confusion and giving doctors direct control over their own availability.",
+                    value2:
+                        "Small structural fix, real difference in how the clinic's day actually ran.",
+                    value3:
+                        "/case-study/physiocraft",
                 },
             ],
         },
@@ -101,25 +94,25 @@ const translations = {
             heading: "Experience",
             items: [
                 {
-                    role: "Frontend Developer Intern",
+                    role: "Product Developer Intern",
                     company: "Pentableu",
                     duration: "4 Months",
                     description:
-                        "HTML, CSS, and JavaScript library React Js. Responsive and interactive user interfaces.",
+                        "Collaborated with designers and developers to build responsive web products. Handled product scoping, translated requirements into UI specifications, and ensured UX alignment.",
                 },
                 {
-                    role: "Frontend Developer",
+                    role: "Product Engineer / Frontend Developer",
                     company: "Pentableu",
                     duration: "1.2 Year",
                     description:
-                        "Portfolio web apps, Web mailers, built reusable components",
+                        "Bridged developer capabilities with business requirements. Led cross-functional work for web apps, optimized feature specs, and streamlined front-end component delivery.",
                 },
                 {
-                    role: "Junior Associate - Web Developer",
+                    role: "Web Product Specialist",
                     company: "AffinityX",
                     duration: "1 Year",
                     description:
-                        "Techs: WordPress, Elementor, Beaver Builder, Responsive Design.",
+                        "Scoped client web product requirements and designed layouts. Managed end-to-end deliverables for diverse clients, aligning expectations with developer constraints.",
                 },
             ],
         },
@@ -133,9 +126,9 @@ const translations = {
             emailPlaceholder: "Your Email",
             service: "Service Needed",
             servicePlaceholder: "Something in Mind?",
-            serviceWeb: "Web Development",
-            serviceMobile: "Mobile Development",
-            serviceOthers: "Others",
+            serviceWeb: "Product Strategy",
+            serviceMobile: "Product Discovery & Design",
+            serviceOthers: "Product Management Consulting",
             budget: "Your Budget",
             budgetPlaceholder: "Your Budget",
             idea: "Explain Your Idea!",
@@ -156,90 +149,83 @@ const translations = {
 
         // Overlay Menu
         menu: {
-            items: ["Start", "Über mich", "Fähigkeiten", "Projekte", "Erfahrung", "Kontakt"],
+            items: ["Start", "Über mich", "Fähigkeiten", "Fallstudien", "Erfahrung", "Kontakt"],
         },
 
         // Home
         home: {
-            roles: ["Web-Entwickler", "Frontend-Entwickler", "React-Entwickler"],
+            roles: ["Angehender Produktmanager", "Produkt-Enthusiast", "Produktstrategie & Analytik"],
             greeting: "Hallo, ich bin",
             name: "Ashwin Umarjikar",
             description:
-                "Ich entwickle schnelle, moderne Webseiten und Web-Apps, die großartig aussehen und Besucher in Kunden verwandeln. Von sauberem UI bis zu solider Performance – ich verwandle Ideen in polierte digitale Erlebnisse.",
-            viewWork: "Meine Arbeit ansehen",
+                "Product Manager mit einer Leidenschaft dafür, Nutzer zu verstehen, Produktstrategien zu definieren und funktionsübergreifende Teams zu leiten, um intuitive, datengesteuerte digitale Erlebnisse zu schaffen.",
+            viewWork: "See My Case Studies",
             resume: "Lebenslauf",
         },
 
         // About
         about: {
             title: "Ashwin Umarjikar",
-            subtitle: "Frontend-Entwickler",
-            bio: "Ich bin ein Frontend-Entwickler, der responsive, pixelgenaue Benutzeroberflächen mit flüssigen Animationen und großartiger UX erstellt. Ich verwandle Designs in schnelle, zugängliche React-Erlebnisse mit modernen Tools wie Tailwind und Framer Motion.",
+            subtitle: "Angehender Produktmanager",
+            bio: "Ich bin ein Produktmanager mit technischem Hintergrund, der seine Erfahrung in der Frontend-Entwicklung nutzt, um die Lücke zwischen Engineering, Design und Business zu schließen. Ich konzentriere mich darauf, die Schmerzpunkte der Nutzer zu verstehen, klare Produktanforderungen zu definieren und hochwirksame Lösungen zu liefern.",
             stats: [
                 { label: "Erfahrung", value: "2+ Jahre" },
-                { label: "Spezialgebiet", value: "Frontend" },
-                { label: "Schwerpunkt", value: "React Js" },
+                { label: "Spezialgebiet", value: "Produktmanagement" },
+                { label: "Schwerpunkt", value: "Strategie & Analytik" },
             ],
-            viewProjects: "Projekte ansehen",
+            viewProjects: "See My Case Studies",
             getInTouch: "Kontakt aufnehmen",
             aboutMeHeading: "Über mich",
-            aboutMe1:
-                "Ich spezialisiere mich darauf, Designs in schnelle, skalierbare Frontend-Erlebnisse zu verwandeln. Mein Fokus liegt auf dem Aufbau wiederverwendbarer Komponenten, sauberer Layouts und intuitiver Nutzerflüsse, die auf jedem Gerät gut funktionieren. Ich arbeite gerne in Teams und iteriere schnell, um Features zu liefern, die Nutzer wirklich lieben.",
             aboutMe2:
-                "Ich konzentriere mich auf sauberen, skalierbaren Frontend-Code und die Lieferung moderner, flüssiger Erlebnisse.",
+                "Meine Karriere begann als Softwareentwickler, wo ich mich auf die Entwicklung von Funktionen und die Lösung technischer Herausforderungen konzentrierte. Die Arbeit in einem Startup bedeutete jedoch, viele verschiedene Hüte aufzusetzen. Neben dem Schreiben von Code arbeitete ich direkt mit Kunden zusammen, erfasste Anforderungen, besprach Geschäftsziele und koordinierte Designer und Entwickler, um Ideen zum Leben zu erwecken."
         },
 
         // Skills
         skills: {
             heading: "Meine Fähigkeiten",
-            subtitle: "Moderne Anwendungen | Moderne Technologien.",
+            subtitle: "Die Lücke zwischen Business, Design und Engineering schließen.",
+            items: {
+                strategy: "Produktstrategie",
+                research: "Nutzerforschung",
+                roadmapping: "Roadmapping",
+                agile: "Agile / Scrum",
+                analytics: "Produktanalytik",
+                figma: "Wireframing & UX",
+                sql: "SQL & Analytik",
+                techBackground: "Technische Tiefe",
+            }
         },
 
-        // Projects
-        projects: {
-            heading: "Projekte",
+        // Case Studies
+        caseStudies: {
+            heading: "Fallstudien",
             items: [
                 {
-                    label: "Next.js Food Delivery App",
+                    label: "Thelootera E-commerce Platform",
                     value:
-                        "Entwickelt, um den vollständigen Full-Stack-Workflow mit Next.js (App Router) zu verstehen. Schwerpunkt auf Backend-Logik, API-Routen und Datenfluss statt UI-Optimierung.",
+                        "Setzte die Idee eines Gründers für eine personalisierte Accessoire-Marke in 16 Wochen in ein Live-Produkt um, verantwortlich für Konzept, abteilungsübergreifende Umsetzung und Launch.",
                     value2:
-                        "Full-Stack-Integration praktiziert: Anfragen von Seiten senden, Antworten verarbeiten und Ergebnisse anzeigen.",
+                        "Bewusst schlank konzipiert – weniger Produkte, diese richtig gemacht und pünktlich gelauncht.",
                     value3:
-                        "https://next-js-food-delivery-kcbe-git-main-ashwin-umarjikars-projects.vercel.app",
+                        "/case-study/thelootera",
                 },
                 {
-                    label: "Portfolio",
+                    label: "Rossari Biotech Ltd",
                     value:
-                        "Ein responsives persönliches Portfolio mit React und Vite erstellt, ergänzt durch Framer Motion-Animationen für flüssige Übergänge und ein modernes Nutzererlebnis.",
+                        "Entwicklung eines SEBI-konformen Bereichs für die Finanzberichterstattung eines börsennotierten Unternehmens, der jahrelange Berichte und Meldungen in ein klares, selbst bedienbares Quartalsarchiv gliedert.",
                     value2:
-                        "Flüssige Mikro-Interaktionen und Seiten-/Abschnittsübergänge mit Framer Motion hinzugefügt, um die UX zu verbessern.",
-                    value3: "https://portfolio-pi-one-0usjbay29r.vercel.app/",
-                },
-                {
-                    label: "Restaurant App",
-                    value:
-                        "Ein Food-App-Prototyp mit React + Vite entwickelt, um reale Projektstruktur und den End-to-End-App-Flow zu verstehen.",
-                    value2:
-                        "Lernprojekt für praktische Erfahrung mit vollständigem App-Workflow. Redux Toolkit-Muster (Store/Slices) implementiert und UI-Seiten mit State verbunden.",
-                    value3: "https://food-app-mocha-omega.vercel.app/",
-                },
-                {
-                    label: "Tic Tac Toe",
-                    value:
-                        "Ein klassisches Zwei-Spieler-Tic-Tac-Toe-Spiel entwickelt, um React State-Handling und Komponentenstruktur zu üben; mit Vercel bereitgestellt.",
-                    value2:
-                        "Einfaches Spielprojekt mit Vite, um UI-Logik, State-Management und Deployment-Workflow zu üben.",
-                    value3: "https://tic-tac-toe-red-psi-70.vercel.app/",
-                },
-                {
-                    label: "Task Master",
-                    value:
-                        "Aufgabenverwaltungs-Dashboard: Aufgaben erstellen, anzeigen, aktualisieren und löschen mit einer übersichtlichen, responsiven Oberfläche.",
-                    value2:
-                        "Produktivitätsfunktionen: Aufgaben nach Schlüsseldetails (Status/Priorität/Fälligkeitsdaten) organisieren, um den Überblick zu behalten.",
+                        "Aus einer reinen Compliance-Vorgabe wurde eine nützliche Funktion für die Anwender.",
                     value3:
-                        "https://task-masater-git-main-ashwin-umarjikars-projects.vercel.app/",
+                        "/case-study/rossari",
+                },
+                {
+                    label: "PhysioCraft",
+                    value:
+                        "Überarbeitung des Buchungsablaufs einer Klinik für zwei unterschiedliche Behandlungsarten, wodurch Planungsfehler minimiert wurden und Ärzte die Kontrolle über ihre Zeiten erhielten.",
+                    value2:
+                        "Kleine strukturelle Änderung mit großer Wirkung im täglichen Ablauf der Klinik.",
+                    value3:
+                        "/case-study/physiocraft",
                 },
             ],
         },
@@ -249,25 +235,25 @@ const translations = {
             heading: "Erfahrung",
             items: [
                 {
-                    role: "Frontend-Entwickler Praktikant",
+                    role: "Produktentwickler Praktikant",
                     company: "Pentableu",
                     duration: "4 Monate",
                     description:
-                        "HTML, CSS und die JavaScript-Bibliothek React Js. Responsive und interaktive Benutzeroberflächen.",
+                        "Zusammenarbeit mit Designern und Entwicklern beim Aufbau responsiver Webprodukte. Übernahme von Produktscoping, Übersetzung von Anforderungen in UI-Spezifikationen und UX-Abstimmung.",
                 },
                 {
-                    role: "Frontend-Entwickler",
+                    role: "Produkt-Ingenieur / Frontend-Entwickler",
                     company: "Pentableu",
                     duration: "1,2 Jahre",
                     description:
-                        "Portfolio Web-Apps, Web-Mailer, wiederverwendbare Komponenten entwickelt.",
+                        "Brücke zwischen Entwicklerkapazitäten und Geschäftsanforderungen. Leitung funktionsübergreifender Arbeit an Web-Apps und Optimierung der Feature-Spezifikationen.",
                 },
                 {
-                    role: "Junior Associate – Web-Entwickler",
+                    role: "Web-Produktspezialist",
                     company: "AffinityX",
                     duration: "1 Jahr",
                     description:
-                        "Technologien: WordPress, Elementor, Beaver Builder, Responsive Design.",
+                        "Definition von Anforderungen für Kunden-Webprodukte und Layout-Design. Verwaltung von End-to-End-Lieferungen, Abstimmung von Kundenerwartungen mit Entwicklereinschränkungen.",
                 },
             ],
         },
@@ -281,9 +267,9 @@ const translations = {
             emailPlaceholder: "Deine E-Mail",
             service: "Gewünschter Service",
             servicePlaceholder: "Etwas im Sinn?",
-            serviceWeb: "Web-Entwicklung",
-            serviceMobile: "Mobile Entwicklung",
-            serviceOthers: "Sonstiges",
+            serviceWeb: "Produktstrategie",
+            serviceMobile: "Product Discovery & Design",
+            serviceOthers: "Produktmanagement-Beratung",
             budget: "Dein Budget",
             budgetPlaceholder: "Dein Budget",
             idea: "Erkläre deine Idee!",

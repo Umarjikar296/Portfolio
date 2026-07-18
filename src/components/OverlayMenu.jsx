@@ -3,7 +3,7 @@ import { FiX } from "react-icons/fi";
 import { useLanguage } from "../context/LanguageContext";
 
 // Map translated menu item labels to anchor IDs (always English section IDs)
-const anchorIds = ["home", "about", "skills", "projects", "experience", "contact"];
+const anchorIds = ["home", "about", "skills", "casestudies", "experience", "contact"];
 
 export default function OverlayMenu({ isOpen, onClose }) {
   const { t } = useLanguage();
@@ -34,7 +34,7 @@ export default function OverlayMenu({ isOpen, onClose }) {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 + index * 0.1 }}>
-                <a href={`#${anchorIds[index]}`}
+                <a href={`/#${anchorIds[index]}`}
                   onClick={onClose}
                   className="text-4xl text-white font-semibold hover:text-pink-400 transition-colors duration-300"
                 >

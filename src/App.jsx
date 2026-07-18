@@ -1,17 +1,11 @@
-import Navbar from './components/Navbar'
-import Home from './section/Home'
-import About from './section/About'
-import Skills from './section/Skills'
-import Projects from './section/Projects'
-import Experience from './section/Experience'
-// import Testimonials from './section/Testimonials'
-import Contact from './section/Contact'
-import Footer from './section/Footer'
-// import ParticlesBackground from './components/ParticlesBackground'
+import { Routes, Route } from 'react-router-dom'
 import CustomCursor from './components/CustomCursor'
 import { useState } from 'react'
 import IntroAnimation from './components/IntroAnimation'
 import { LanguageProvider } from './context/LanguageContext'
+import ScrollToAnchor from './components/ScrollToAnchor'
+import HomeLayout from './components/HomeLayout'
+import CaseStudyDetail from './section/CaseStudyDetail'
 
 export default function App() {
 
@@ -22,18 +16,13 @@ export default function App() {
     <LanguageProvider>
       {!introDone && <IntroAnimation onFinish={() => setIntroDone(true)} />}
       {introDone && (
-        <div className='relative, gradient text-white'>
+        <div className='relative gradient text-white min-h-screen'>
           <CustomCursor />
-          {/* <ParticlesBackground /> */}
-          <Navbar />
-          <Home />
-          <About />
-          <Skills />
-          <Projects />
-          <Experience />
-          {/* <Testimonials /> */}
-          <Contact />
-          <Footer />
+          <ScrollToAnchor />
+          <Routes>
+            <Route path="/" element={<HomeLayout />} />
+            <Route path="/case-study/:id" element={<CaseStudyDetail />} />
+          </Routes>
         </div>
       )}
     </LanguageProvider>

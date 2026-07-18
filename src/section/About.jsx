@@ -59,8 +59,8 @@ export default function About() {
                             ))}
                         </div>
                         <div className="mt-6 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center md:justify-start">
-                            <a href="#projects" className="inline-flex items-center justify-center rounded-lg bg-white text-black font-semibold px-5 py-3 hover:bg-gray-200 transition">{viewProjects}</a>
-                            <a href="#contact" className="inline-flex items-center justify-center rounded-lg border border-white/20 text-white bg-white/10 px-5 py-3 hover:bg-white/20">{getInTouch}</a>
+                            <a href="/#casestudies" className="inline-flex items-center justify-center rounded-lg bg-white text-black font-semibold px-5 py-3 hover:bg-gray-200 transition">{viewProjects}</a>
+                            <a href="/#contact" className="inline-flex items-center justify-center rounded-lg border border-white/20 text-white bg-white/10 px-5 py-3 hover:bg-white/20">{getInTouch}</a>
                         </div>
                     </div>
                 </motion.div>
@@ -71,8 +71,12 @@ export default function About() {
                     transition={{ duration: 0.6 }}
                     viewport={{ once: true, amount: 0.4 }}>
                     <h3 className="text-2xl sm:text-3xl font-bold text-white mb-3">{aboutMeHeading}</h3>
-                    <p className="text-gray-300 leading-relaxed text-base sm:text-lg">{aboutMe1}</p>
-                    <p className="mt-4 text-gray-400 text-base sm:text-lg">{aboutMe2}</p>
+                    {aboutMe1 && <p className="text-gray-300 leading-relaxed text-base sm:text-lg">{aboutMe1}</p>}
+                    {aboutMe2 && (
+                        <p className={`${aboutMe1 ? "mt-4 text-gray-400" : "text-gray-300"} leading-relaxed text-base sm:text-lg`}>
+                            {aboutMe2}
+                        </p>
+                    )}
                 </motion.div>
             </div>
         </section>
