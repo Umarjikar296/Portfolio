@@ -291,6 +291,55 @@ export default function CaseStudyDetail() {
               );
             }
 
+            // Type 5: subsections
+            if (section.type === "subsections") {
+              return (
+                <motion.div key={sIdx} variants={itemVariants} className="space-y-6">
+                  <h2 className="text-3xl font-bold text-[#1cd8d2] border-b border-white/10 pb-2">
+                    {section.title}
+                  </h2>
+                  {section.intro && (
+                    <p className="text-gray-300 leading-relaxed text-justify">
+                      {section.intro}
+                    </p>
+                  )}
+                  <div className="space-y-8 pt-2">
+                    {section.subsections.map((sub, subIdx) => (
+                      <div key={subIdx} className="space-y-4">
+                        <h3 className="text-xl font-bold text-white flex items-center gap-2">
+                          {sub.icon === "check" ? (
+                            <FaCheckCircle className="text-[#00bf8f] text-xl shrink-0" />
+                          ) : (
+                            <FaLightbulb className="text-amber-400 text-xl shrink-0" />
+                          )}
+                          {sub.title}
+                        </h3>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                          {sub.items.map((item, idx) => (
+                            <div
+                              key={idx}
+                              className={`bg-white/5 border border-white/10 rounded-xl p-5 flex items-start gap-4 hover:bg-white/10 transition-colors ${
+                                sub.items.length === 1 ? "md:col-span-2" : ""
+                              }`}
+                            >
+                              {sub.icon === "check" ? (
+                                <FaCheckCircle className="text-[#00bf8f] text-xl shrink-0 mt-1" />
+                              ) : (
+                                <FaLightbulb className="text-amber-400 text-xl shrink-0 mt-1" />
+                              )}
+                              <p className="text-gray-200 text-justify text-sm sm:text-base leading-relaxed">
+                                {item}
+                              </p>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </motion.div>
+              );
+            }
+
             return null;
           })}
         </motion.div>

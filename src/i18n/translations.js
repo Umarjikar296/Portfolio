@@ -58,6 +58,7 @@ const translations = {
         // Case Studies
         caseStudies: {
             heading: "Case Studies",
+            readCaseStudy: "Read Case Study",
             items: [
                 {
                     label: "Thelootera E-commerce Platform",
@@ -94,25 +95,25 @@ const translations = {
             heading: "Experience",
             items: [
                 {
-                    role: "Product Developer Intern",
+                    role: "Solutions Developer Intern",
                     company: "Pentableu",
-                    duration: "4 Months",
+                    duration: "Jan 2021 – Jun 2021",
                     description:
-                        "Collaborated with designers and developers to build responsive web products. Handled product scoping, translated requirements into UI specifications, and ensured UX alignment.",
+                        "Engaged directly with clients to gather requirements and define feature scope for custom web applications. Proposed usability enhancements and delivered web solutions across the full product lifecycle.",
                 },
                 {
-                    role: "Product Engineer / Frontend Developer",
+                    role: "Junior Solutions Developer",
                     company: "Pentableu",
-                    duration: "1.2 Year",
+                    duration: "Jul 2021 – Jun 2022",
                     description:
-                        "Bridged developer capabilities with business requirements. Led cross-functional work for web apps, optimized feature specs, and streamlined front-end component delivery.",
+                        "Owned end-to-end delivery of concurrent client web products as primary client contact and builder. Scoped requirements, designed solutions, and delivered features aligned with user needs.",
                 },
                 {
-                    role: "Web Product Specialist",
+                    role: "Junior Associate Website Developer",
                     company: "AffinityX",
-                    duration: "1 Year",
+                    duration: "Jul 2022 – Jun 2023",
                     description:
-                        "Scoped client web product requirements and designed layouts. Managed end-to-end deliverables for diverse clients, aligning expectations with developer constraints.",
+                        "Managed feature development for client web applications via JIRA in an agile workflow. Translated requirements into dev tasks, coordinating with design/QA and supporting SEO strategy.",
                 },
             ],
         },
@@ -199,6 +200,7 @@ const translations = {
         // Case Studies
         caseStudies: {
             heading: "Fallstudien",
+            readCaseStudy: "Fallstudie lesen",
             items: [
                 {
                     label: "Thelootera E-commerce Platform",
@@ -235,25 +237,25 @@ const translations = {
             heading: "Erfahrung",
             items: [
                 {
-                    role: "Produktentwickler Praktikant",
+                    role: "Solutions Developer Praktikant",
                     company: "Pentableu",
-                    duration: "4 Monate",
+                    duration: "Jan 2021 – Jun 2021",
                     description:
-                        "Zusammenarbeit mit Designern und Entwicklern beim Aufbau responsiver Webprodukte. Übernahme von Produktscoping, Übersetzung von Anforderungen in UI-Spezifikationen und UX-Abstimmung.",
+                        "Direkte Abstimmung mit Kunden zur Anforderungsanalyse und Funktionsdefinition für Webanwendungen. Vorschlag von Usability-Optimierungen und Umsetzung von Lösungen über den gesamten Produktlebenszyklus.",
                 },
                 {
-                    role: "Produkt-Ingenieur / Frontend-Entwickler",
+                    role: "Junior Solutions Developer",
                     company: "Pentableu",
-                    duration: "1,2 Jahre",
+                    duration: "Jul 2021 – Jun 2022",
                     description:
-                        "Brücke zwischen Entwicklerkapazitäten und Geschäftsanforderungen. Leitung funktionsübergreifender Arbeit an Web-Apps und Optimierung der Feature-Spezifikationen.",
+                        "End-to-End-Verantwortung für mehrere Kunden-Webprodukte als zentraler Ansprechpartner und Entwickler. Strukturierung von Anforderungen, Lösungsdesign und Usability-Erweiterungen.",
                 },
                 {
-                    role: "Web-Produktspezialist",
+                    role: "Junior Associate Website Developer",
                     company: "AffinityX",
-                    duration: "1 Jahr",
+                    duration: "Jul 2022 – Jun 2023",
                     description:
-                        "Definition von Anforderungen für Kunden-Webprodukte und Layout-Design. Verwaltung von End-to-End-Lieferungen, Abstimmung von Kundenerwartungen mit Entwicklereinschränkungen.",
+                        "Steuerung der Feature-Entwicklung für Kunden-Webanwendungen via JIRA im agilen Workflow. Übersetzung von Kundenanforderungen in Entwicklungsaufgaben, UX-Abstimmung und SEO-Optimierung.",
                 },
             ],
         },

@@ -76,33 +76,44 @@ export const caseStudiesData = {
           items: [
             {
               title: "Videos on Home Exercise Dashboard",
-              description: "Patients' ability to complete exercises in between sessions is crucial to the success of physiotherapy, and the app was unable to support this. A dashboard where doctors can assign home exercise videos to patients after a session would give patients an on-demand reference instead of memory or handwritten notes. This also provides a natural touchpoint for patients to stay engaged with the clinic between visits."
+              description: "Patients' ability to complete exercises in between sessions is crucial to the success of physiotherapy, and the app was unable to support this. I suggested a dashboard where doctors can assign home exercise videos to patients after a session. If built, this would give patients an on-demand reference and a natural touchpoint between visits."
             },
             {
               title: "Electronic Intake Forms",
-              description: "Traditional patient history collection on arrival, on paper, took up appointment time and caused front desk delays. I suggested digital intake forms patients fill out before their visit so doctors know their history. This cuts patient in-clinic time and reduces ripple-effect delays from the scheduling issue."
+              description: "Traditional patient history collection on arrival, on paper, took up appointment time and caused front desk delays. I suggested digital intake forms patients fill out before their visit so doctors know their history. This would cut patient in-clinic time and reduce ripple-effect delays from the scheduling issue."
             },
             {
               title: "Pre-Appointment Information and FAQ",
-              description: "Patient questions (what to bring, how to prepare, what to expect for a first therapy session vs. a consultation) were previously answered by phone calls to the clinic, wasting staff time. I suggested a basic FAQ and pre-appointment instructions section shown when booking so patients show up ready and the clinic gets fewer repetitive calls."
+              description: "Patient questions (what to bring, how to prepare, what to expect for a first therapy session vs. a consultation) were previously answered by phone calls to the clinic, wasting staff time. I suggested a basic FAQ and pre-appointment instructions section shown when booking so patients show up ready, with the goal of fewer repetitive calls to the clinic."
             },
             {
               title: "Cancellation and reschedule options",
-              description: "No self-service rescheduling meant calling the clinic to change a booking, which was frustrating for patients and laborious for staff, and often left slots empty when patients didn't show up. I suggested letting patients reschedule or cancel in the app to free up slots earlier for other patients and reduce friction-related no-shows."
+              description: "No self-service rescheduling meant calling the clinic to change a booking, which was frustrating for patients and laborious for staff, and often left slots empty when patients didn't show up. I suggested letting patients reschedule or cancel in the app with the goal of freeing up slots earlier and reducing friction-related no-shows."
             }
           ],
           outro: "Why These Matter as a Group: These follow the same philosophy as the core booking feature: eliminate manual coordination when the system can do it and give patients and doctors clear information up front rather than resolving confusion later. Instead of just focusing on the booking problem, these recommendations covered the entire appointment lifecycle, before, during and after the visit, in addition to the redesign of booking."
         },
         {
           title: "Impact",
-          type: "list",
-          items: [
-            "Reduced patient wait time confusion by providing accurate, type-specific slot durations to front desk and patients.",
-            "Self-serve freeze feature eliminates manual doctor availability changes.",
-            "Daily cap to prevent overbooking of therapy on high demand days.",
-            "Reduced front-desk phone volume by integrating rescheduling, FAQs, and pre-visit prep into the app.",
-            "History collected digitally pre-visit to reduce in-clinic time per patient.",
-            "Improved patient compliance to prescribed exercises through an always-available video dashboard."
+          type: "subsections",
+          intro: "The booking redesign below shipped within the 8-week timeline. The four recommendations in the previous section were proposed as next steps, not built in this phase.",
+          subsections: [
+            {
+              title: "Shipped",
+              icon: "check",
+              items: [
+                "Replaced one generic booking flow with two visit-specific flows, so slot durations were structurally correct from the moment of booking instead of guessed at the front desk.",
+                "Daily therapy cap automatically stops surfacing therapy slots once a doctor's limit is hit, turning an informal concern into an enforced constraint.",
+                "Doctor-controlled slot freezing removed an entire manual coordination step between doctors and the front desk."
+              ]
+            },
+            {
+              title: "Proposed, not yet built",
+              icon: "lightbulb",
+              items: [
+                "Home exercise video dashboard, digital intake forms, pre-appointment FAQ, and self-serve rescheduling — recommended to close gaps before and after the appointment, but outside the 8-week scope of this project."
+              ]
+            }
           ]
         },
         {
@@ -193,33 +204,44 @@ export const caseStudiesData = {
           items: [
             {
               title: "Heimübungsvideos im Dashboard",
-              description: "Die Fähigkeit der Patienten, Übungen zwischen den Sitzungen durchzuführen, ist entscheidend für den Erfolg der Physiotherapie, was die App bisher jedoch nicht unterstützte. Ein Dashboard, in dem Ärzte den Patienten nach einer Sitzung Heimübungsvideos zuweisen können, dient den Patienten als direkte Referenz (statt sich auf das Gedächswert oder handschriftliche Notizen verlassen zu müssen). Dies schafft zudem einen natürlichen Kontaktpunkt für Patienten, um zwischen den Besuchen mit der Klinik in Verbindung zu bleiben."
+              description: "Die Fähigkeit der Patienten, Übungen zwischen den Sitzungen durchzuführen, ist entscheidend für den Erfolg der Physiotherapie, was die App bisher jedoch nicht unterstützte. Ein Dashboard, in dem Ärzte den Patienten nach einer Sitzung Heimübungsvideos zuweisen können. Falls umgesetzt, böte dies den Patienten eine jederzeit verfügbare Referenz und einen natürlichen Kontaktpunkt zwischen den Besuchen."
             },
             {
               title: "Digitale Anamnesebögen",
-              description: "Die traditionelle Erfassung der Patientenhistorie auf Papier bei der Ankunft nahm wertvolle Behandlungszeit in Anspruch und führte zu Verzögerungen am Empfang. Ich schlug digitale Anamnesebögen vor, die Patienten vor ihrem Besuch ausfüllen, damit die Ärzte ihre Historie bereits kennen. Dies verkürzt die Aufenthaltszeit in der Klinik und reduziert Folgeverzögerungen."
+              description: "Die traditionelle Erfassung der Patientenhistorie auf Papier bei der Ankunft nahm wertvolle Behandlungszeit in Anspruch und führte zu Verzögerungen am Empfang. Ich schlug digitale Anamnesebögen vor, die Patienten vor ihrem Besuch ausfüllen, damit die Ärzte ihre Historie bereits kennen. Dies würde die Aufenthaltszeit der Patienten in der Praxis verkürzen und Folgeverzögerungen durch das Planungsproblem reduzieren."
             },
             {
               title: "Informationen vor dem Termin & FAQ",
-              description: "Fragen der Patienten (was mitzubringen ist, wie man sich vorbereitet usw.) wurden bisher telefonisch beantwortet, was viel Personalzeit kostete. Ich habe einen grundlegenden FAQ-Bereich und Anweisungen vor dem Termin vorgeschlagen, die bei der Buchung angezeigt werden, damit Patienten vorbereitet erscheinen und weniger Routineanrufe eingehen."
+              description: "Fragen der Patienten (was mitzubringen ist, wie man sich vorbereitet usw.) wurden bisher telefonisch beantwortet, was viel Personalzeit kostete. Ich habe einen grundlegenden FAQ-Bereich und Anweisungen vor dem Termin vorgeschlagen, die bei der Buchung angezeigt werden, damit Patienten vorbereitet erscheinen, mit dem Ziel, Routineanrufe in der Praxis zu reduzieren."
             },
             {
               title: "Stornierungs- und Verschiebeoptionen",
-              description: "Ohne die Möglichkeit zur selbstständigen Umbuchung mussten Patienten anrufen, was frustrierend für sie und mühsam fürs Personal war, und oft zu leeren Zeitfenstern bei Nichterscheinen führte. Ich schlug vor, Patienten Termine in der App verschieben oder stornieren zu lassen, um Plätze frühzeitig freizugeben und no-show-Raten zu senken."
+              description: "Ohne die Möglichkeit zur selbstständigen Umbuchung mussten Patienten anrufen, was frustrierend für sie und mühsam fürs Personal war, und oft zu leeren Zeitfenstern bei Nichterscheinen führte. Ich schlug vor, Patienten Termine in der App verschieben oder stornieren zu lassen, mit dem Ziel, Plätze frühzeitig freizugeben und reibungsbedingte No-Shows zu reduzieren."
             }
           ],
           outro: "Warum diese Maßnahmen als Gruppe wichtig sind: Diese Empfehlungen folgen derselben Philosophie wie die Kern-Buchungsfunktion: Manuelle Abstimmung eliminieren, sobald das System dies übernehmen kann, und Patienten sowie Ärzten vorab klare Informationen bieten, statt Unklarheiten im Nachhinein zu klären. Statt sich nur auf das Buchungsproblem zu konzentrieren, decken diese Empfehlungen den gesamten Behandlungszyklus vor, während und nach dem Besuch ab."
         },
         {
           title: "Erfolg & Auswirkungen",
-          type: "list",
-          items: [
-            "Reduzierung von Wartezeiten und Unklarheiten durch präzise, typspezifische Termindauern für Empfang und Patienten.",
-            "Das selbstgesteuerte Sperren von Terminfenstern macht manuelle Änderungen der Verfügbarkeit durch das Personal überflüssig.",
-            "Tägliche Obergrenze zur Vermeidung von Überlastung an Tagen mit hoher Nachfrage.",
-            "Geringeres Telefonaufkommen am Empfang durch die Integration von Terminverschiebungen, FAQs und Vorbereitungshinweisen in der App.",
-            "Digitale Erfassung der Patientenhistorie vor dem Besuch verkürzt die Aufnahmezeit in der Praxis.",
-            "Verbesserte Therapietreue der Patienten durch ein jederzeit verfügbares Übungsvideo-Dashboard."
+          type: "subsections",
+          intro: "Das untenstehende Buchungs-Redesign wurde innerhalb des 8-Wochen-Zeitraums umgesetzt. Die vier Empfehlungen im vorherigen Abschnitt wurden als nächste Schritte vorgeschlagen und in dieser Phase nicht gebaut.",
+          subsections: [
+            {
+              title: "Umgesetzt",
+              icon: "check",
+              items: [
+                "Ein generischer Buchungsablauf wurde durch zwei besuchsspezifische Abläufe ersetzt, sodass die Termindauern ab dem Zeitpunkt der Buchung strukturell korrekt waren, anstatt am Empfang geschätzt zu werden.",
+                "Die tägliche Therapie-Obergrenze stoppt automatisch das Anbieten von Therapiefenstern, sobald das Limit eines Arztes erreicht ist, was ein informelles Anliegen in eine durchgesetzte Regel verwandelt.",
+                "Die arztgesteuerte Sperrung von Zeitfenstern eliminierte einen gesamten manuellen Abstimmungsschritt zwischen Ärzten und dem Empfang."
+              ]
+            },
+            {
+              title: "Vorgeschlagen, noch nicht umgesetzt",
+              icon: "lightbulb",
+              items: [
+                "Dashboard für Heimübungsvideos, digitale Anamnesebögen, FAQ vor dem Termin und selbstständige Terminverschiebung — empfohlen, um Lücken vor und nach dem Termin zu schließen, jedoch außerhalb des 8-wöchigen Rahmen dieses Projekts."
+              ]
+            }
           ]
         },
         {
@@ -277,7 +299,7 @@ export const caseStudiesData = {
         {
           title: "Result",
           type: "paragraph",
-          content: "The product went live on time at 16 weeks. Sales performance post-launch was strong, and customers moved through the ordering/customization workflow smoothly, validating that the core experience - browse, personalize, order - worked as intended for a founder-led brand entering the market for the first time."
+          content: "The product went live on time at 16 weeks, and customers moved through the ordering/customization workflow smoothly, validating that the core experience, browse, personalize, order, worked as intended for a founder-led brand entering the market for the first time."
         },
         {
           title: "What This Says About My Work Style as a PM",
@@ -332,7 +354,7 @@ export const caseStudiesData = {
         {
           title: "Ergebnis",
           type: "paragraph",
-          content: "Das Produkt ging pünktlich nach 16 Wochen live. Die Verkaufszahlen nach dem Launch waren stark und die Kunden nutzten den Bestell- und Anpassungsworkflow reibungslos. Dies bestätigte, dass die Kernerfahrung – Stöbern, Personalisieren, Bestellen – für eine neue Marke am Markt wie gewünscht funktioniert."
+          content: "Das Produkt ging pünktlich nach 16 Wochen live, und die Kunden nutzten den Bestell- und Anpassungsworkflow reibungslos. Dies bestätigte, dass die Kernerfahrung – Stöbern, Personalisieren, Bestellen – für eine neue Marke am Markt wie gewünscht funktioniert."
         },
         {
           title: "Was dies über meinen Arbeitsstil als PM aussagt",
